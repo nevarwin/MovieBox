@@ -2,7 +2,7 @@
 //  HorizontalListView.swift
 //  MovieBox
 //
-//  Created by XOO_Raven on 4/29/26.
+//  Created by raven on 4/29/26.
 //
 
 import SwiftUI
