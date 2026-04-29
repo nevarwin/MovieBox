@@ -55,5 +55,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView_()
+    HomeView()
 }
