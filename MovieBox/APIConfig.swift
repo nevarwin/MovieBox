@@ -25,11 +25,17 @@ struct APIConfig: Decodable {
             throw APIConfigError.fileNotFound
         }
         
+        let data: Data
         do {
-            let data = try Data(contentsOf: url)
-            return try JSONDecoder().decode(APIConfig.self, from: data)
+            data = try Data(contentsOf: url)
         } catch {
             throw APIConfigError.dataLoadingFailed(underlyingError: error)
+        }
+        
+        do {
+            return try JSONDecoder().decode(APIConfig.self, from: data)
+        } catch {
+            throw APIConfigError.decodingFailed(underlyingError: error)
         }
     }
 }
