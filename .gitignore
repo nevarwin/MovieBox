@@ -63,3 +63,13 @@ fastlane/test_output
 
 MovieBox/APIConfig.json
 
+# General
+.DS_Store
+
+# Xcode
+UserInterfaceState.xcuserstate
+*.xcscheme
+
+# Secrets
+APIConfig.json
+
